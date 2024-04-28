@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/idNum"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="ID HERE..."
+        android:inputType="number"/>
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="NAME HERE..."
+        android:layout_below="@+id/idNum"/>
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="AGE HERE..."
+        android:inputType="number"
+        android:layout_below="@id/name"/>
+    <EditText
+        android:id="@+id/course"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="COURSE HERE..."
+        android:layout_below="@id/age"/>
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/course"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:text="ADD STUDENT"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="____________________________________________________________"
+        android:layout_below="@id/addButton"/>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        tools:listitem="@layout/items"/>
+
+</RelativeLayout>
